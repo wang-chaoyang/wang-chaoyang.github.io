@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Explore In-Context Segmentation via Latent Diffusion Models">
+  <meta name="keywords" content="Diffusion Model, In-context Segmentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore In-Context Segmentation via Latent Diffusion Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Explore In-Context Segmentation via Latent Diffusion Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://wang-chaoyang.github.io">Chaoyang Wang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://lxtgh.github.io">Xiangtai Li</a><sup>2,3</sup>,</span>
+            <span class="author-block">
+              <a href="https://henghuiding.github.io">Henghui Ding</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://luqi.info">Lu Qi</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://zhangzjn.github.io/">Jiangning Zhang</a><sup>5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=T4gqdPkAAAAJ">Yunhai Tong</a><sup>1</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://yanshuicheng.info">Shuicheng Yan</a><sup>3</sup>
+            </span>            
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Peking University</span>
+            <span class="author-block"><sup>2</sup>S-Lab, Nanyang Technological University</span>
+            <span class="author-block"><sup>3</sup>Skywork AI</span>
+            <span class="author-block"><sup>4</sup>The University of California, Merced</span>
+            <span class="author-block"><sup>5</sup>Zhejiang University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://github.com/wang-chaoyang/RefLDMSeg"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/wang-chaoyang/RefLDMSeg"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper Teaser -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <div class="publication-img">
+            <img id="teaser" src="./static/images/teaser.png" style="width:1200px;"/>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;"><p>
+      <h2 class="subtitle">
+        We propose Ref LDM-Seg, a minimalist LDM framework for in-context segmentation.
+      </h2>
+    </p></div>
+    </div>
+  </div>
+</section>
+<!-- /Paper Teaser -->
+
+
+<!-- Abstract. -->
+<section class="hero is-light">
+  <div class="container is-max-desktop ">
+    <div class="columns is-centered has-text-centered" style="margin-top: 10px; margin-bottom: 0px;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In-context segmentation has drawn more attention with the introduction of vision foundation models. Most existing approaches adopt metric learning or masked image modeling to build the correlation between visual prompts and input image queries. In this work, we explore this problem from a new perspective, using one representative generation model, the latent diffusion model (LDM). We observe a task gap between generation and segmentation in diffusion models, but LDM is still an effective minimalist for in-context segmentation. In particular, we propose two meta-architectures and correspondingly design several output alignment and optimization strategies. We have conducted comprehensive ablation studies and empirically found that the segmentation quality counts on output alignment and in-context instructions. Moreover, we build a new and fair in-context segmentation benchmark that includes both image and video datasets. Experiments validate the efficiency of our approach, demonstrating comparable or even stronger results than previous specialist models or visual foundation models. Our study shows that LDMs can also achieve good enough results for challenging in-context segmentation tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Abstract. -->
+
+<!-- Framework. -->
+<section class="section" style="margin-top:-50px; margin-bottom:-50px;">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-3 is-centered">Ref LDM-Seg Framework</h2>
+            <div class="publication-img">
+              <img id="architecture" src="./static/images/framework.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+            </div>
+          </div>
+        </div>
+        <p>
+          Ref LDM-Seg operates as a minimalist and generates the mask under the guidance of in-context instructions. The two variants differ in input formulation, denoising time steps, and optimization target.
+        </p>
+    </div>
+  </div>
+</section>
+<!-- /Framework  -->
+
+
+<!-- Results -->
+<section>
+  <div class="container is-max-desktop" style="margin-top:-100px; margin-bottom:-50px;">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3 is-centered">Visual Results</h2>
+        </div>
+      </div>
+      <img id="result-comparison" src="./static/images/instruct.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <h2 class="subtitle has-text-centered">
+        The output of Ref LDM-Seg varies based on the in-context instructions.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container is-max-desktop" style="margin-top:-50px; margin-bottom:-50px;">
+    <div class="hero-body">
+      <img id="result-comparison" src="./static/images/latent.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <h2 class="subtitle has-text-centered">
+        Visualizations at different time steps.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- /Results -->
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{wang2024refldmseg,
+  title={Explore In-Context Segmentation via Latent Diffusion Models},
+  author={Chaoyang Wang and Xiangtai Li and Henghui Ding and Lu Qi and Jiangning Zhang and Yunhai Tong and Chen Change Loy and Shuicheng Yan},
+  journal={arXiv pre-print},
+  year={2024},
+}</code></pre>
+  </div>
+</section>
+<!-- /BibTeX -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. Thanks for their excellent work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
