@@ -27,14 +27,14 @@ My research interest includes computer vision and machine learning.
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='project/refldmseg/static/images/teaser.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[TBD](TBD)
+[Explore In-Context Segmentation via Latent Diffusion Models](https://wang-chaoyang.github.io/project/refldmseg/)
 
-**Chaoyang Wang**
+**Chaoyang Wang**, Xiangtai Li, Henghui Ding, Lu Qi, Jiangning Zhang, Yunhai Tong, Chen Change Loy, Shuicheng Yan
 
-[**Project**](TBD) 
+[**Project**](https://wang-chaoyang.github.io/project/refldmseg/) 
 <!-- <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
 <!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 </div>
