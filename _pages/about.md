@@ -27,6 +27,20 @@ My research interest includes computer vision and machine learning.
 
 # 📝 Publications 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='project/semflow/static/images/teaser.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[SemFlow: Binding Semantic Segmentation and Image Synthesis via Rectified Flow](https://arxiv.org/abs/2405.20282)
+
+**Chaoyang Wang**, Xiangtai Li, Lu Qi, Henghui Ding, Yunhai Tong, Ming-Hsuan Yang
+
+[**Project**](https://github.com/wang-chaoyang/SemFlow) 
+<!-- <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
+<!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='project/refldmseg/static/images/teaser.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
