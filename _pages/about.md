@@ -34,7 +34,7 @@ My research interest includes computer vision and machine learning.
 
 **Chaoyang Wang**, Xiangtai Li, Lu Qi, Henghui Ding, Yunhai Tong, Ming-Hsuan Yang
 
-[**Project**](https://github.com/wang-chaoyang/SemFlow) 
+[**Project**](https://wang-chaoyang.github.io/project/semflow) 
 <!-- <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
 <!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 </div>
