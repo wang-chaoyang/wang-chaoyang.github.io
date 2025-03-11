@@ -56,31 +56,32 @@
             <span class="author-block">
               <a href="https://lxtgh.github.io">Xiangtai Li</a><sup>2,3</sup>,</span>
             <span class="author-block">
-              <a href="https://henghuiding.github.io">Henghui Ding</a><sup>2</sup>,
+              <a href="https://henghuiding.github.io">Henghui Ding</a><sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="http://luqi.info">Lu Qi</a><sup>4</sup>,
+              <a href="http://luqi.info">Lu Qi</a><sup>5</sup>,
             </span>
             <span class="author-block">
-              <a href="https://zhangzjn.github.io/">Jiangning Zhang</a><sup>5</sup>,
+              <a href="https://zhangzjn.github.io/">Jiangning Zhang</a><sup>6</sup>,
             </span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=T4gqdPkAAAAJ">Yunhai Tong</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a><sup>2</sup>,
+              <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://yanshuicheng.info">Shuicheng Yan</a><sup>3</sup>
+              <a href="https://yanshuicheng.info">Shuicheng Yan</a><sup>2,3</sup>
             </span>            
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Peking University</span>
-            <span class="author-block"><sup>2</sup>S-Lab, Nanyang Technological University</span>
-            <span class="author-block"><sup>3</sup>Skywork AI</span>
-            <span class="author-block"><sup>4</sup>The University of California, Merced</span>
-            <span class="author-block"><sup>5</sup>Zhejiang University</span>
+            <span class="author-block"><sup>2</sup>Skywork AI</span>
+            <span class="author-block"><sup>3</sup>Nanyang Technological University</span>
+            <span class="author-block"><sup>4</sup>Fudan University</span>
+            <span class="author-block"><sup>5</sup>Wuhan University</span>
+            <span class="author-block"><sup>6</sup>Zhejiang University</span>
           </div>
 
           <div class="column has-text-centered">
@@ -92,7 +93,7 @@
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Paper</span>
                 </a>
               </span>
               <!-- Code Link. -->
@@ -102,7 +103,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming Soon)</span>
                 </a>
               </span>
             </div>
@@ -126,26 +127,13 @@
       </div>
       <div style="text-align:center;"><p>
       <h2 class="subtitle">
-        We propose Ref LDM-Seg, a minimalist LDM framework for in-context segmentation.
+        We propose LDIS, a minimalist LDM framework for in-context segmentation.
       </h2>
     </p></div>
     </div>
   </div>
 </section>
 <!-- /Paper Teaser -->
-
-<!-- Paper video. -->
-<section class="hero is-small">
-  <div class="columns is-centered has-text-centered"  style="margin-top: -10px; margin-bottom: 20px;">
-    <div class="column is-three-fifths">
-      <h2 class="title is-3">Video</h2>
-      <div class="publication-video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/k6O3aLtQVSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /Paper video.   -->
 
 
 <!-- Abstract. -->
@@ -156,7 +144,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In-context segmentation has drawn more attention with the introduction of vision foundation models. Most existing approaches adopt metric learning or masked image modeling to build the correlation between visual prompts and input image queries. In this work, we explore this problem from a new perspective, using one representative generation model, the latent diffusion model (LDM). We observe a task gap between generation and segmentation in diffusion models, but LDM is still an effective minimalist for in-context segmentation. In particular, we propose two meta-architectures and correspondingly design several output alignment and optimization strategies. We have conducted comprehensive ablation studies and empirically found that the segmentation quality counts on output alignment and in-context instructions. Moreover, we build a new and fair in-context segmentation benchmark that includes both image and video datasets. Experiments validate the efficiency of our approach, demonstrating comparable or even stronger results than previous specialist models or visual foundation models. Our study shows that LDMs can also achieve good enough results for challenging in-context segmentation tasks.
+            In-context segmentation has drawn increasing attention with the advent of vision foundation models. Its goal is to segment objects using given reference images. Most existing approaches adopt metric learning or masked image modeling to build the correlation between visual prompts and input image queries. This work approaches the problem from a fresh perspective - unlocking the capability of the latent diffusion model (LDM) for in-context segmentation and investigating different design choices. Specifically, we examine the problem from three angles: instruction extraction, output alignment, and meta-architectures. We design a two-stage masking strategy to prevent interfering information from leaking into the instructions. In addition, we propose an augmented pseudo-masking target to ensure the model predicts without forgetting the original images. Moreover, we build a new and fair in-context segmentation benchmark that covers both image and video datasets. Experiments validate the effectiveness of our approach, demonstrating comparable or even stronger results than previous specialist or visual foundation models. We hope our work inspires others to rethink the unification of segmentation and generation.
           </p>
         </div>
       </div>
@@ -171,14 +159,14 @@
     <div class="hero-body">
         <div class="columns is-centered has-text-centered">
           <div class="column">
-            <h2 class="title is-3 is-centered">Ref LDM-Seg Framework</h2>
+            <h2 class="title is-3 is-centered">LDIS Framework</h2>
             <div class="publication-img">
               <img id="architecture" src="./static/images/framework.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
             </div>
           </div>
         </div>
         <p>
-          Ref LDM-Seg operates as a minimalist and generates the mask under the guidance of in-context instructions. The two variants differ in input formulation, denoising time steps, and optimization target.
+          LDIS operates as a minimalist and generates the mask under the guidance of in-context instructions. The two variants differ in input formulation, denoising time steps, and optimization target.
         </p>
     </div>
   </div>
@@ -195,9 +183,9 @@
           <h2 class="title is-3 is-centered">Visual Results</h2>
         </div>
       </div>
-      <img id="result-comparison" src="./static/images/instruct.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <img id="result-comparison" src="./static/images/seg.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
       <h2 class="subtitle has-text-centered">
-        The output of Ref LDM-Seg varies based on the in-context instructions.
+        Visual results on several challenging cases.
       </h2>
     </div>
   </div>
@@ -220,7 +208,7 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{RefLDMSeg,
+    <pre><code>@article{wang2024explore,
       title={Explore In-Context Segmentation via Latent Diffusion Models},
       author={Wang, Chaoyang and Li, Xiangtai and Ding, Henghui and Qi, Lu and Zhang, Jiangning and Tong, Yunhai and Loy, Chen Change and Yan, Shuicheng},
       journal={arXiv preprint arXiv:2403.09616},
