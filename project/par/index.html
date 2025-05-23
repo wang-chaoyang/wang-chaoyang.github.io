@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Conditional Panoramic Image Generation via Masked Autoregressive Modeling">
+  <!-- <meta name="keywords" content=""> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conditional Panoramic Image Generation via Masked Autoregressive Modeling</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Conditional Panoramic Image Generation via Masked Autoregressive Modeling</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://wang-chaoyang.github.io">Chaoyang Wang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://lxtgh.github.io">Xiangtai Li</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="http://luqi.info">Lu Qi</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=_fdb9EQAAAAJ">Xiaofan Lin</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://noyii.github.io/">Jinbin Bai</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=KHg04fkAAAAJ">Qianyu Zhou</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=T4gqdPkAAAAJ">Yunhai Tong</a><sup>1</sup>
+            </span>         
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Peking University</span>
+            <span class="author-block"><sup>2</sup>Insta360 Research</span>
+            <span class="author-block"><sup>3</sup>National University of Singapore</span>
+            <span class="author-block"><sup>4</sup>Jilin University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="http://arxiv.org/abs/2505.16862"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://wang-chaoyang.github.io/project/par"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper Teaser -->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <div class="publication-img">
+            <img id="teaser" src="./static/images/teaser.png" style="width:1200px;"/>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;"><p>
+      <h2 class="subtitle">
+        We propose LDIS, a minimalist LDM framework for in-context segmentation.
+      </h2>
+    </p></div>
+    </div>
+  </div>
+</section> -->
+<!-- /Paper Teaser -->
+
+
+<!-- Paper video. -->
+<section class="hero is-small">
+  <div class="columns is-centered has-text-centered"  style="margin-top: -10px; margin-bottom: 20px;">
+    <div class="column is-three-fifths">
+      <h2 class="title is-3">Video</h2>
+      <div class="publication-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Q_79M0-JXgM?si=3uiV_DEQc9HS_wtD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Paper video.   -->
+
+
+<!-- Abstract. -->
+<section class="hero is-light">
+  <div class="container is-max-desktop ">
+    <div class="columns is-centered has-text-centered" style="margin-top: 10px; margin-bottom: 0px;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent progress in panoramic image generation has underscored two critical limitations in existing approaches. First, most methods are built upon diffusion models, which are inherently ill-suited for equirectangular projection (ERP) panoramas due to the violation of the identically and independently distributed (i.i.d.) Gaussian noise assumption caused by their spherical mapping. Second, these methods often treat text-conditioned generation (text-to-panorama) and image-conditioned generation (panorama outpainting) as separate tasks, relying on distinct architectures and task-specific data. In this work, we propose a unified framework, Panoramic AutoRegressive model (PAR), which leverages masked autoregressive modeling to address these challenges. PAR avoids the i.i.d. assumption constraint and integrates text and image conditioning into a cohesive architecture, enabling seamless generation across tasks. To address the inherent discontinuity in existing generative models, we introduce circular padding to enhance spatial coherence and propose a consistency alignment strategy to improve generation quality. Extensive experiments demonstrate competitive performance in text-to-image generation and panorama outpainting tasks while showcasing promising scalability and generalization capabilities. 
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Abstract. -->
+
+<!-- Framework. -->
+<section class="section" style="margin-top:-50px; margin-bottom:-50px;">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-3 is-centered">PAR Framework</h2>
+            <div class="publication-img">
+              <img id="architecture" src="./static/images/method.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+            </div>
+          </div>
+        </div>
+        <p>
+          PAR utilizes a transformer to predict regions obscured by mask, then employs these predictions as conditions to drive an MLP in generating continuous tokens. Both original and augmented triples are processed by the same model, and then aligned through a consistency loss.
+        </p>
+    </div>
+  </div>
+</section>
+<!-- /Framework  -->
+
+
+<!-- Results -->
+<section>
+  <div class="container is-max-desktop" style="margin-top:-100px; margin-bottom:-50px;">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3 is-centered">Visual Results</h2>
+        </div>
+      </div>
+      <img id="result-comparison" src="./static/images/teaser.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <h2 class="subtitle has-text-centered">
+        Visual results on several tasks
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container is-max-desktop" style="margin-top:-50px; margin-bottom:-50px;">
+    <div class="hero-body">
+      <img id="result-comparison" src="./static/images/t2p.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <h2 class="subtitle has-text-centered">
+        Visualizations for text to panorama
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container is-max-desktop" style="margin-top:-50px; margin-bottom:-50px;">
+    <div class="hero-body">
+      <img id="result-comparison" src="./static/images/edit.png" style="width:1000px; margin-top:10px;margin-bottom:10px;"/>
+      <h2 class="subtitle has-text-centered">
+        Visualizations for panoramic image editing
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- /Results -->
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{wang2025conditional,
+      title={Conditional Panoramic Image Generation via Masked Autoregressive Modeling},
+      author={Wang, Chaoyang and Li, Xiangtai and Qi, Lu and Lin, Xiaofan and Bai, Jinbin and Zhou, Qianyu and Tong, Yunhai},
+      journal={arXiv preprint arXiv:2505.16862},
+      year={2025}
+    }</code></pre>
+  </div>
+</section>
+<!-- /BibTeX -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the <a href="https://nerfies.github.io/"> Nerfies</a> project page. Thanks for their excellent work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
