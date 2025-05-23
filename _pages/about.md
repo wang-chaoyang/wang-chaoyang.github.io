@@ -27,7 +27,23 @@ My research interest includes computer vision and machine learning.
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='project/semflow/static/images/teaser.png' alt="sym" width="100%"></div></div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='project/par/static/images/teaser.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Conditional Panoramic Image Generation via Masked Autoregressive Modeling](https://arxiv.org/abs/2505.16862)
+
+**Chaoyang Wang**, Xiangtai Li, Lu Qi, Xiaofan Lin, Jinbin Bai, Qianyu Zhou, Yunhai Tong
+
+[**Project**](https://wang-chaoyang.github.io/project/par/) 
+<!-- <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
+<!-- - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+</div>
+</div>
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2024</div><img src='project/semflow/static/images/teaser.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [SemFlow: Binding Semantic Segmentation and Image Synthesis via Rectified Flow](https://arxiv.org/abs/2405.20282)
@@ -41,7 +57,7 @@ My research interest includes computer vision and machine learning.
 </div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='project/refldmseg/static/images/teaser.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2025</div><img src='project/refldmseg/static/images/teaser.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Explore In-Context Segmentation via Latent Diffusion Models](https://arxiv.org/abs/2403.09616)
