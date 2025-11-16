@@ -19,7 +19,7 @@ redirect_from:
 
 I’m currently a PhD Student at School of Intelligence Science and Technology, Peking University (PKU), advised by Prof. Yunhai Tong.
 
-My research interest includes computer vision and machine learning. 
+My research interest includes visual generative models and MLLMs. 
 
 <!-- # 🔥 News
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
@@ -28,7 +28,7 @@ My research interest includes computer vision and machine learning.
 # 📝 Publications 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv</div><img src='project/par/static/images/teaser.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='project/par/static/images/teaser.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Conditional Panoramic Image Generation via Masked Autoregressive Modeling](https://arxiv.org/abs/2505.16862)
