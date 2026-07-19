@@ -17,15 +17,14 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a PhD Student at School of Intelligence Science and Technology, Peking University (PKU), advised by Prof. [Yunhai Tong](https://scholar.google.com/citations?user=T4gqdPkAAAAJ). My research interests include visual generative models and multimodal large language models (MLLMs). 
+I am a PhD Student at School of Intelligence Science and Technology, Peking University (PKU), advised by Prof. [Yunhai Tong](https://scholar.google.com/citations?user=T4gqdPkAAAAJ). My research interests include visual generative models, covering both visual synthesis and generative perception, as well as multimodal large language models (MLLMs). In the longer term, I am interested in general-purpose visual models that unify generation, perception, and understanding. 
 
-<!-- # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+<!-- # News
+- *2025.09* : PAR accepted to <strong>NeurIPS 2025</strong>. 
+- *2024.12* : LDIS accepted to <strong>AAAI 2025</strong>. 
+- *2024.09* : SemFlow accepted to <strong>NeurIPS 2024</strong>.  -->
 
-# 📝 Selected Publications 
-
-Full lists can be found in [Google Scholar](https://scholar.google.com/citations?user=eaK5b2oAAAAJ).
+# Selected Publications [Full List](https://scholar.google.com/citations?user=eaK5b2oAAAAJ)
 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='project/par/static/images/teaser.png' alt="sym" width="100%"></div></div>
