@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Guiding Visual Autoregressive Models through Spectrum Weakening">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guiding Visual Autoregressive Models through Spectrum Weakening</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Guiding Visual Autoregressive Models through Spectrum Weakening</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://wang-chaoyang.github.io">Chaoyang Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=nIAumeQAAAAJ">Tianmeng Yang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=T4gqdPkAAAAJ">Yunhai Tong</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Peking University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2511.22991"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon" aria-hidden="true">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="hero teaser" aria-label="TLDR">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="subtitle has-text-centered">
+          <strong>TL;DR:</strong> Spectrum Weakening Guidance is a training-free and condition-free alternative to CFG.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light" aria-labelledby="abstract-title">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered" style="margin-top: 10px; margin-bottom: 0;">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3" id="abstract-title">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Classifier-free guidance (CFG) has become a widely adopted practice for enhancing generation quality and improving condition alignment. Recent studies have explored guidance mechanisms for unconditional generation, yet these approaches remain fundamentally tied to assumptions specific to diffusion models. In this work, we propose a spectrum weakening framework for visual autoregressive (AR) models. The method is training-free and condition-free, constructing a controllable weak model in the spectral domain without architectural modifications. Specifically, we selectively retain spectral components along the channel dimension of internal representations to weaken features without requiring a complete spatial layout. We further apply spectrum renormalization to maintain feature scales during generation. Comprehensive empirical and ablation studies confirm the effectiveness of our approach, including raster-scan, random-order, and scale-wise AR, spanning discrete and continuous modeling and covering class and text-condition scenarios, demonstrating high-quality unconditional generation and strong prompt alignment for conditional generation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="analysis-title">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered" id="analysis-title">Spectrum Analysis</h2>
+      <!-- Figure 4 from the current paper PDF. -->
+      <figure>
+        <a href="./static/images/analysis.png" aria-label="View spectrum analysis at full resolution">
+          <img src="./static/images/analysis.png" width="2239" height="1416"
+               style="display: block; width: 100%; height: auto;"
+               alt="Lumina-mGPT generations under different spectral band selections, with entropy-difference curves comparing bandwidths and band positions.">
+        </a>
+        <figcaption class="content has-text-justified" style="margin-top: 1rem;">
+          <p>
+            The left panel varies the start and end points of the retained spectral band.
+            Narrower bands generally create a larger entropy gap between the weak and base
+            branches, as shown in the upper-right plot. Shifting a band while keeping its
+            width fixed has a smaller effect, as shown in the lower-right plot.
+            Entropy difference is measured as the weak branch minus the base branch.
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="visual-title">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered" id="visual-title">Visual Results</h2>
+      <!-- Figure 1 and Figure 2 panels from the paper. -->
+      <figure>
+        <h3 class="title is-4 has-text-centered">Lumina-mGPT</h3>
+        <a href="./static/images/lumina.png" aria-label="View Lumina-mGPT results at full resolution">
+          <img src="./static/images/lumina.png" width="2381" height="822" loading="lazy"
+               style="display: block; width: 100%; height: auto;"
+               alt="Lumina-mGPT without SWG above and with SWG below. The left three columns show unconditional generation and the right three show text-conditioned generation.">
+        </a>
+        <figcaption class="subtitle has-text-centered" style="margin-top: 1rem;">
+          <!-- Top, baseline. Bottom, SWG. Left, unconditional generation. Right, text-conditioned generation. -->
+        </figcaption>
+      </figure>
+
+      <figure style="margin-top: 3rem;">
+        <h3 class="title is-4 has-text-centered">NOVA</h3>
+        <a href="./static/images/nova.png" aria-label="View NOVA results at full resolution">
+          <img src="./static/images/nova.png" width="2377" height="825" loading="lazy"
+               style="display: block; width: 100%; height: auto;"
+               alt="NOVA without SWG above and with SWG below. The left three columns show unconditional generation and the right three show text-conditioned generation.">
+        </a>
+        <figcaption class="subtitle has-text-centered" style="margin-top: 1rem;">
+          <!-- Top, baseline. Bottom, SWG. Left, unconditional generation. Right, text-conditioned generation. -->
+        </figcaption>
+      </figure>
+
+      <figure style="margin-top: 3rem;">
+        <h3 class="title is-4 has-text-centered">RandAR</h3>
+        <a href="./static/images/randar.png" aria-label="View RandAR results at full resolution">
+          <img src="./static/images/randar.png" width="2385" height="824" loading="lazy"
+               style="display: block; width: 100%; height: auto;"
+               alt="RandAR without SWG above and with SWG below. The left three columns show unconditional generation and the right three show class-conditioned generation.">
+        </a>
+        <figcaption class="subtitle has-text-centered" style="margin-top: 1rem;">
+          <!-- Top, baseline. Bottom, SWG. Left, unconditional generation. Right, class-conditioned generation. -->
+        </figcaption>
+      </figure>
+
+      <!-- Figure 9 from the paper. -->
+      <figure style="margin-top: 3rem;">
+        <h3 class="title is-4 has-text-centered">Infinity</h3>
+        <a href="./static/images/infinity.png" aria-label="View Infinity results at full resolution">
+          <img src="./static/images/infinity.png" width="2383" height="858" loading="lazy"
+               style="display: block; width: 100%; height: auto;"
+               alt="Infinity baseline generations above and SWG generations below. The left three columns use null prompts and the right three use text prompts about a bunk bed, a dog, and green apples.">
+        </a>
+        <figcaption class="subtitle has-text-centered" style="margin-top: 1rem;">
+          <!-- Top, baseline. Bottom, SWG. Left, unconditional generation. Right, text-conditioned generation. -->
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre style="white-space: pre-wrap; overflow-wrap: anywhere;"><code>@article{wang2025guiding,
+  title={Guiding Visual Autoregressive Models through Spectrum Weakening},
+  author={Wang, Chaoyang and Yang, Tianmeng and Tong, Yunhai},
+  journal={arXiv preprint arXiv:2511.22991},
+  year={2025}
+}</code></pre>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website source code based on the <a href="https://nerfies.github.io/">Nerfies</a> project page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

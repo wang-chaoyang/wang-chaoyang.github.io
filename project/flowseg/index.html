@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FlowSeg reshapes vector field learning for generative semantic segmentation through a distance-aware correction and end-to-end pixel modeling.">
+  <title>Rethinking Vector Field Learning for Generative Segmentation</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/layout.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop has-text-centered">
+        <h1 class="title is-1 publication-title">Rethinking Vector Field Learning for Generative Segmentation</h1>
+        <div class="is-size-5 publication-authors">
+          <span class="author-block"><a href="https://wang-chaoyang.github.io/">Chaoyang Wang</a><sup>1</sup>,</span>
+          <span class="author-block"><a href="https://scholar.google.com/citations?user=z92gIuEAAAAJ">Yaobo Liang</a><sup>1</sup>,</span>
+          <span class="author-block"><a href="https://scholar.google.com/citations?user=IPIZUVAAAAAJ">Boci Peng</a><sup>1</sup>,</span>
+          <span class="author-block"><a href="https://scholar.google.com/citations?user=ETIvXFYAAAAJ">Fan Duan</a><sup>2</sup>,</span>
+          <span class="author-block"><a href="https://scholar.google.com/citations?user=T4gqdPkAAAAJ">Yunhai Tong</a><sup>1</sup></span>
+        </div>
+        <div class="is-size-5 publication-authors">
+          <span class="author-block"><sup>1</sup>Peking University</span>
+          <span class="author-block"><sup>2</sup>Tsinghua University</span>
+        </div>
+        <div class="publication-links">
+          <span class="link-block"><a class="external-link button is-normal is-rounded is-dark" href="https://arxiv.org/abs/2603.19218"><span>Paper</span></a></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero teaser" aria-label="Comparison of diffusion segmentation methods">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <figure>
+            <a href="./static/images/paradigms.png" aria-label="View the method comparison at full resolution">
+              <img src="./static/images/paradigms.png" width="1620" height="560" fetchpriority="high" alt="Comparison of mask refinement, feature extraction, VAE-based image translation, and FlowSeg's end-to-end pixel diffusion with a reshaped flow matching loss.">
+            </a>
+            <figcaption class="has-text-centered"><h2 class="subtitle"><strong>TL;DR:</strong> We reshape the vector field in pixel diffusion for enhanced generative segmentation.</h2></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-light" id="abstract">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered abstract-columns">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+<p>Taming diffusion models for generative segmentation has attracted increasing attention. While existing approaches primarily focus on architectural tweaks or training heuristics, there remains a limited understanding of the intrinsic mismatch between continuous flow matching objectives and discrete perception tasks. In this work, we revisit diffusion segmentation from the perspective of vector field learning. We identify two key limitations of the commonly used flow matching objective: gradient vanishing and trajectory traversing, which result in slow convergence and poor class separation. To tackle these issues, we propose a principled vector field reshaping strategy that augments the learned velocity field with a detached distance-aware correction term. This correction introduces both attractive and repulsive interactions, enhancing gradient magnitudes near centroids while preserving the original diffusion training framework. Furthermore, we design a computationally efficient, quasi-random centroid encoding scheme inspired by Kronecker sequences, which integrates seamlessly with an end-to-end pixel neural field framework for pixel-level semantic alignment. Extensive experiments consistently demonstrate significant improvements over vanilla flow matching approaches, substantially narrowing the performance gap between generative segmentation and strong discriminative specialists.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="visualizations" aria-label="Visualizations">
+      <div class="container is-max-desktop">
+      <figure class="result-figure ">
+        <a href="./static/images/vector-field.png" aria-label="View figure at full resolution">
+          <img src="./static/images/vector-field.png" width="1980" height="540" loading="lazy" alt="Vanilla flow matching and FlowSeg trajectories, alongside gradient norms near a semantic centroid.">
+        </a>
+        <figcaption class="content has-text-centered"><p>Reshaping the vector field strengthens gradients near semantic centroids and improves separation between class trajectories.</p></figcaption>
+      </figure>
+      <figure class="result-figure segmentation-figure">
+        <a href="./static/images/segmentation.png" aria-label="View figure at full resolution">
+          <img src="./static/images/segmentation.png" width="1510" height="765" loading="lazy" alt="Input images, ground-truth masks, and FlowSeg predictions for three ADE20K scenes and three COCO-Stuff scenes.">
+        </a>
+        <figcaption class="content has-text-centered"><p>FlowSeg captures semantic regions across diverse indoor and outdoor scenes on ADE20K and COCO-Stuff.</p></figcaption>
+      </figure>
+      <figure class="result-figure ">
+        <a href="./static/images/symmflow-comparison.png" aria-label="View figure at full resolution">
+          <img src="./static/images/symmflow-comparison.png" width="1596" height="560" loading="lazy" alt="FlowSeg and SymmFlow comparison showing raw and mapped predictions, consistency across random seeds, and pixel-level semantic alignment.">
+        </a>
+        <figcaption class="content has-text-centered"><p>FlowSeg produces consistent predictions across random seeds and improves pixel-level semantic alignment.</p></figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{wang2026rethinking,
+  title={Rethinking Vector Field Learning for Generative Segmentation},
+  author={Wang, Chaoyang and Liang, Yaobo and Peng, Boci and Duan, Fan and Tong, Yunhai},
+  journal={arXiv preprint arXiv:2603.19218},
+  year={2026},
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>Website template adapted from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
