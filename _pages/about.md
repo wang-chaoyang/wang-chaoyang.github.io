@@ -27,6 +27,36 @@ I am a PhD Student at School of Intelligence Science and Technology, Peking Univ
 # Selected Publications [Full List](https://scholar.google.com/citations?user=eaK5b2oAAAAJ)
 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2026</div><img src='/project/flowseg/static/images/paradigms.png' alt="FlowSeg segmentation results" width="100%" loading="lazy"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**Rethinking Vector Field Learning for Generative Segmentation**
+
+**Chaoyang Wang**, Yaobo Liang, Boci Peng, Fan Duan, Yunhai Tong
+
+[**Paper**](https://arxiv.org/abs/2603.19218)
+|
+[**Project**](https://wang-chaoyang.github.io/project/flowseg/)
+
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2026</div><img src='/project/swg/static/images/lumina.png' alt="Spectrum Weakening Guidance generation results" width="100%" loading="lazy"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**Guiding Visual Autoregressive Models through Spectrum Weakening**
+
+**Chaoyang Wang**, Tianmeng Yang, Yunhai Tong
+
+[**Paper**](https://arxiv.org/abs/2511.22991)
+|
+[**Project**](https://wang-chaoyang.github.io/project/swg/)
+
+</div>
+</div>
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='project/par/static/images/teaser.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
